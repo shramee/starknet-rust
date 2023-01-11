@@ -18,14 +18,14 @@ extern "C" {
     #[wasm_bindgen(js_namespace = console, js_name = log)]
     fn logAny(s: JsValue);
 
-    #[wasm_bindgen(js_namespace = starknet, catch)]
-    pub fn id() -> Result<String, JsValue>;
-    #[wasm_bindgen(js_namespace = starknet, catch)]
-    pub fn name() -> Result<String, JsValue>;
-    #[wasm_bindgen(js_namespace = starknet, catch)]
-    pub fn version() -> Result<String, JsValue>;
-    #[wasm_bindgen(js_namespace = starknet, catch)]
-    pub fn icon() -> Result<String, JsValue>;
+    #[wasm_bindgen(js_namespace = starknet)]
+    pub static id: String;
+    #[wasm_bindgen(js_namespace = starknet)]
+    pub static name: String;
+    #[wasm_bindgen(js_namespace = starknet)]
+    pub static version: String;
+    #[wasm_bindgen(js_namespace = starknet)]
+    pub static icon: String;
 
     #[wasm_bindgen(js_namespace = starknet, catch)]
     pub fn selectedAddress() -> Result<String, JsValue>;
